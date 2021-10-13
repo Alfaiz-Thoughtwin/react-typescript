@@ -1,0 +1,5 @@
+.navbar li a:hover {
+    color: white !important;
+    padding-bottom: 0.25rem !important;
+    border-bottom: 2px solid white !important;
+}
