@@ -43,17 +43,12 @@ export const Navbar = () => {
                                         <Link className="nav-link" to="/api">API</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/redux">Redux</Link>
+                                        <Link className="nav-link" to="/todo">Todo</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/about">About</Link>
                                     </li>
                                 </>
-                            }
-                            { !user && 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/login">Login</Link>
-                                </li>
                             }
                         </ul>
                         { user && 
