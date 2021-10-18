@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from '../../Firebase';
-import { getFirestore, setDoc, collection, doc} from 'firebase/firestore';
+import { getFirestore, setDoc, collection, doc, getDocs } from 'firebase/firestore';
 import { onAuthStateChanged } from "firebase/auth";
 import { Navbar } from '../../Components';
 
@@ -20,7 +20,21 @@ export const Home = () => {
         setMyTodo([...myTodo, text]);
         setText("");
     }
+
     
+    const getData = () =>{
+        getDocs(dbReff)
+        .then((res: any)=>{
+            let data = res.docs[0]._document.data.value.mapValue.fields.todos.arrayValue.values
+            
+            data.forEach((doc:any) => (
+                console.log(`${doc.stringValue}`)
+                ));
+        })
+        .catch(()=>alert('error home.tsx'))
+    }
+    getData()
+
     useEffect(() =>{
         onAuthStateChanged(auth, user => {
             if(user) setUser(user);
