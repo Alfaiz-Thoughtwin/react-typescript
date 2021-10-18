@@ -21,15 +21,15 @@ export const App = () => {
     <>
         <Router>
           <Switch>
-            <PrivateRoute exact path="/" user={user}component={Home}/>
-            <PrivateRoute exact path="/home" user={user}component={Home}/>
-            <PrivateRoute exact path="/services" user={user}component={Services}/>
-            <PrivateRoute exact path="/services/:serviceId" user={user}component={ServicesDetails}/>
-            <PrivateRoute exact path="/api" user={user}component={API}/>
-            <PrivateRoute exact path="/redux" user={user}component={Redux}/>
-            <PrivateRoute exact path="/about" user={user}component={About}/>
-            <PublicRoute exact path="/login" user={user}component={Login}/>
-            <PublicRoute exact path="/signup" user={user}component={SignUp}/>
+            <PrivateRoute exact path="/" user={user} component={Home}/>
+            <PrivateRoute exact path="/home" user={user} component={Home}/>
+            <PrivateRoute exact path="/services" user={user} component={Services}/>
+            <PrivateRoute exact path="/services/:serviceId" user={user} component={ServicesDetails}/>
+            <PrivateRoute exact path="/api" user={user} component={API}/>
+            <PrivateRoute exact path="/redux" user={user} component={Redux}/>
+            <PrivateRoute exact path="/about" user={user} component={About}/>
+            <PublicRoute exact path="/login" user={user} component={Login}/>
+            <PublicRoute exact path="/signup" user={user} component={SignUp}/>
           </Switch>
         </Router>
     </>

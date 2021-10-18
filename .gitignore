@@ -41,6 +41,7 @@ firebaseConfig.js
 # Dependency directories
 node_modules/
 jspm_packages/
+/Todo-backend
 
 # TypeScript v1 declaration files
 typings/
